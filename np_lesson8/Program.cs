@@ -9,7 +9,8 @@ namespace np_lesson8
 
         static void RequestFtpServer()
         {
-            //  HttpWebRequest, FtpWebRequest - old classes
+            // HttpWebRequest, FtpWebRequest - old classes
+            // WebRequest
 
             var request = WebRequest.Create("ftp://localhost:21") as FtpWebRequest;
 
@@ -20,8 +21,6 @@ namespace np_lesson8
             var sr = new StreamReader(stream);
             var data = sr.ReadToEnd();
             Console.WriteLine(data);
-
-            // IIS
         }
 
 
